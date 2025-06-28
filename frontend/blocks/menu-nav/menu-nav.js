@@ -3,11 +3,11 @@ template.innerHTML = `
 <link rel="stylesheet" href="./blocks/style.css">
   <div class="overlay" id="overlay">
     <span class="close-btn" id="close">&times;</span>
-    <a href="#" class="menu-nav__item" id="menu-button">Menu</a>
-    <a href="#" class="menu-nav__item" id="reserv-button">Reservation</a>
-    <a href="#" class="menu-nav__item" id="ab-button">About</a>
-    <a href="#" class="menu-nav__item" id="contact-button">Contact</a>
-    <a href="#" class="menu-nav__item" id="blog-button">Blog</a>
+    <a href="#" class="menu-nav__item" id="menu-button">MENU</a>
+    <a href="#" class="menu-nav__item" id="reserv-button">RESERVATION</a>
+    <a href="#" class="menu-nav__item" id="ab-button">ABOUT</a>
+    <a href="#" class="menu-nav__item" id="contact-button">CONTACT</a>
+    <a href="#" class="menu-nav__item" id="blog-button">BLOG</a>
   </div>
 `;
 

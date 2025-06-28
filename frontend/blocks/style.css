@@ -1,3 +1,4 @@
+/* Importaciones de estilos para Web Components */
 @import url('header-bar/header-bar.css');
 @import url('side-bar/side-bar.css');
 @import url('footer/footer.css');
@@ -8,56 +9,98 @@
 
 /* Reset universal */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* 🌐 HTML y body base */
+/* Añadimos font-size para el base de REM, idealmente 62.5% para que 1rem = 10px */
+html {
+    font-size: 62.5%; /* Esto hace que 1rem sea 10px, facilitando los cálculos de Figma */
+    /* Asegúrate de que Playfair Display esté correctamente importada o en tu sistema */
+    font-family: 'Playfair Display', serif;
+}
+
 body {
-  background-color: white;
-  height: 100vh;
-  width: 100%;  
-  position: relative;
-  overflow: hidden;
-  font-family: 'Playfair Display', serif;
-  padding-top: 0.1px;  
+    /* El fondo principal del body debe ser negro */
+    background-color: black; /* Esto asegura el fondo negro deseado */
+    height: 100vh;
+    width: 100vw; /* Usar 100vw asegura que ocupe todo el ancho del viewport */
+    position: relative;
+    overflow: hidden; /* Mantener overflow hidden a menos que necesites scroll global */
+    /* padding-top: 0.1px; - Esto no es necesario y puede causar problemas, lo quitamos */
 }
 
-/* Fondo decorativo con bordes internos redondeados */
+/* Fondo decorativo con bordes responsivos */
 body::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
-    ),
-    var(--dynamic-background, url("/frontend/assets/images/fondoP.jpg")) no-repeat center center;
-  right: 10px;
-  bottom: 10px;
-  background-size: cover;
-  border-radius: 20px;
-  z-index: -1;
-  pointer-events: none; /* Asegura que no interfiera con clics */
+    content: "";
+    position: absolute;
+    /* Convertimos 24px (de tu Figma 1920px) a vw */
+    /* Cálculo: (24px / 1920px) * 100 = 1.25vw */
+    top: 1.25vw;
+    left: 1.25vw;
+    right: 1.25vw;
+    bottom: 1.25vw;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.0) 0%,
+            rgba(0, 0, 0, 0.0) 50%,
+            rgba(0, 0, 0, 0.7) 100%
+        ),
+        var(--dynamic-background, url("/frontend/assets/images/fondoP.jpg")) no-repeat center center;
+    background-size: cover;
+
+    /* Hacemos el border-radius responsivo, asumiendo 20px en 1920px de Figma */
+    /* Cálculo: (20px / 1920px) * 100 = 1.0416vw, o simplemente un rem si es pequeño y constante */
+    border-radius: 1.5rem; /* Ajustado a REM para mejor escalabilidad con la fuente base */
+    /* Si el border-radius es muy crítico y quieres que escale con el ancho de pantalla como el padding, podrías usar: */
+    /* border-radius: 1.04vw; */
+
+    z-index: -1;
+    pointer-events: none; /* Asegura que no interfiera con clics */
 }
 
-
+/* Animación (se mantiene igual, ya que no es responsiva de tamaño) */
 .fade-in {
-  animation: fadeIn 0.6s ease-in-out both;
+    animation: fadeIn 0.6s ease-in-out both;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Media Queries (ejemplos para ajustar otros elementos si es necesario) --- */
+
+/* Puedes añadir media queries para afinar el diseño en rangos específicos */
+/* Por ejemplo, si los bordes de 1.25vw se vuelven demasiado pequeños en móviles muy pequeños */
+@media screen and (max-width: 48rem) { /* Menos de 480px de ancho */
+    body::before {
+        /* En pantallas muy pequeñas, podemos asegurar un padding mínimo fijo o ligeramente diferente */
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        border-radius: 1rem; /* O ajustar si es necesario */
+    }
+}
+
+/* O si en pantallas Ultra-Wide los bordes se vuelven gigantes */
+@media screen and (min-width: 200rem) { /* Más de 2000px de ancho */
+    body::before {
+        /* Limitar el tamaño máximo de los bordes para que no sean excesivos */
+        top: 2.4rem; /* 24px */
+        left: 2.4rem; /* 24px */
+        right: 2.4rem; /* 24px */
+        bottom: 2.4rem; /* 24px */
+    }
 }

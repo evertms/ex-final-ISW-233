@@ -127,5 +127,5 @@ En la carpeta `frontend/blocks`, los componentes visuales están construidos com
 - Los componentes son reutilizables, encapsulados y pueden ser llamados directamente desde el HTML como elementos personalizados: `<about-page>`, `<header-bar>`, etc.
 
 
-## 5 Pasos a seguir  
+## 5. Pasos a seguir  
 Ejecutar con LiveServer en la raíz del proyecto y, al ser redirigido al navegador, ir a la carpeta /frontend. 

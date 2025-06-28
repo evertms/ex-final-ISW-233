@@ -1,36 +1,37 @@
 const template = document.createElement("template");
 template.innerHTML = `
+<link rel="stylesheet" href="./blocks/header-bar/header-bar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="./blocks/style.css"> 
 
-  <link rel="stylesheet" href="./blocks/header-bar/header-bar.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-  <div class="header-container">
+<div class="header-container">
     <nav class="navbar-principal">
-      <ul class="navbar-principal__menu">
-        <div class="burger-menu">
-          <input type="checkbox" id="menu-toggle" class="ocultar">
-          <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        </div>
-        <li><a class="navbar-principal__link--Name" href="#" id="home-button">QITCHEN</a></li>
-        <li><a class="navbar-principal__link" href="#" id="menu-button">MENU</a></li>
-        <li><a class="navbar-principal__link" href="#" id="ab-button">ABOUT</a></li>
-        <li><a class="navbar-principal__link--Book" href="#" id="reserv-button">BOOK A TABLE</a></li>
-      </ul>
+        <ul class="navbar-principal__menu">
+            <div class="burger-menu">
+                <input type="checkbox" id="menu-toggle" class="ocultar">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            </div>
+            <li><a class="navbar-principal__link--Name" href="#" id="home-button">
+                <img src="/frontend/assets/images/qitchen-logo.svg" alt="QITCHEN Logo" class="navbar-principal__logo">
+            </a></li>
+            <li><a class="navbar-principal__link" href="#" id="menu-button">MENU</a></li>
+            <li><a class="navbar-principal__link" href="#" id="ab-button">ABOUT</a></li>
+            <li><a class="navbar-principal__link--Book" href="#" id="reserv-button">BOOK A TABLE</a></li>
+        </ul>
     </nav>
 
     <div class="icon-bar">
-      <button id="register-btn" class="icon-bar__register">Registration</button>
-      
-      <button id="login-btn" class="icon-bar__btn" >
-        <i class="icon-bar__icon fas fa-user"></i>
-      </button>
+        <button id="register-btn" class="icon-bar__register">REGISTRATION</button>
+        
+        <button id="login-btn" class="icon-bar__btn" >
+            <i class="icon-bar__icon fas fa-user"></i>
+        </button>
 
-      <button id="carrito-btn" class="icon-bar__btn">
-        <i class="icon-bar__icon fas fa-shopping-cart"></i>
-      </button>
+        <button id="carrito-btn" class="icon-bar__btn">
+            <i class="icon-bar__icon fas fa-shopping-cart"></i>
+        </button>
     </div>
-
-    </div>
+</div>
 `;
 
 class HeaderBar extends HTMLElement {
