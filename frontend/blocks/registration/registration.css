@@ -109,45 +109,45 @@
 }
 
 .registration-form-label {
-  margin-bottom: 0.5rem; /* 5px */
-  font-size: 0.9rem; /* 9px */
-  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-family: 'Satoshi', serif;
 }
 
 .registration-form__input {
-  padding: 0.8rem 1.5rem; /* 8px 15px */
-  border: 0.1rem solid gray; /* 1px */
-  border-radius: 0.8rem; /* 8px */
-  height: 4rem; /* 40px */
+  padding: 0.8rem 1.5rem;
+  border: 0.1rem solid gray;
+  border-radius: 0.8rem;
+  height: 4rem;
   background-color: #212221;
   color: #EFE7D2;
-  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
-  font-size: 1.6rem; /* 16px (si 1rem = 10px, entonces 1.6rem = 16px) */
+  font-family: 'Satoshi', serif;
+  font-size: 1.6rem;
 }
 
 .registration-form__input::placeholder {
-  color: gray; /* Mantienes el color gris, pero podrías cambiarlo a #EFE7D2 si prefieres consistencia */
-  font-size: 1.6rem; /* 16px */
+  color: gray;
+  font-size: 1.6rem;
 }
 
 .registration-submit {
   display: flex;
   justify-content: center; 
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho para centrar su contenido */
+  width: 100%;
 }
 
 .registration-submit__button {
-  width: 100%; /* Ocupa todo el ancho de su padre (`.registration-submit`) */
-  max-width: 65rem; /* **Corrección:** 650px, usa `max-width` para responsividad */
-  padding: 1rem; /* 10px */
+  width: 100%;
+  max-width: 65rem;
+  padding: 1rem;
   background-color: #EFE7D2;
   border: none;
-  border-radius: 0.5rem; /* 5px */
+  border-radius: 0.5rem;
   color: black;
-  font-size: 1.6rem; /* 16px */
+  font-size: 1.6rem;
   cursor: pointer;
-  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
-  transition: background-color 0.2s ease, color 0.2s ease; /* Añade una transición suave */
+  font-family: 'Satoshi', serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .registration-submit__button:hover {
@@ -157,17 +157,17 @@
 
 .registration-form__redirector {
   display: block;
-  width: 13.5rem; /* 135px */
-  margin: 0 auto; /* **Corrección:** Centrado horizontalmente */
+  width: 13.5rem;
+  margin: 0 auto;
   text-decoration: underline;
   color: #EFE7D2;
-  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
-  font-size: 1.4rem; /* 14px */
-  text-align: center; /* Asegura que el texto se centre dentro de su propio bloque */
-  margin-top: 1.5rem; /* Añade un espacio superior para separarlo del botón */
+  font-family: 'Satoshi', serif;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
-.registration-form__redirector:hover { /* **Corrección:** `::hover` a `:hover` */
+.registration-form__redirector:hover {
   cursor: pointer;
-  text-decoration: none; /* Ejemplo: Quitar el subrayado al pasar el ratón */
+  text-decoration: none;
 }

@@ -59,10 +59,6 @@
     display: none;
 }
 
-
-
-/*===== texto y al lado imagen =====*/
-
 .about-layout__description {
     flex: 1;
     background-color: black; 
@@ -113,8 +109,6 @@
     max-height: auto;
 }
 
-/*==============los logros==============*/
-
 .about-layout__container {
     display: flex;
     color: #EFE7D2;
@@ -157,8 +151,6 @@
     font-weight: 20;
     padding-left: 0;
 }
-
-/*===== texto e imagen al lado =====*/
 
 .about-layout__font2 {
     display: flex;

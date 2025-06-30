@@ -45,6 +45,13 @@
     white-space: nowrap;
 }
 
+.navbar-principal__link:hover {
+    background-color: rgba(24, 24, 24, 0.5);
+    border: 0.1rem solid rgba(239, 231, 210, 0.15);
+    border-radius: 0.5rem;
+}
+
+
 .navbar-principal__link--Name {
     text-decoration: none;
     display: inline-flex;
@@ -229,10 +236,10 @@
     display: block;
 }
 
-@container (max-width: 700px) { /* Ejemplo: si el header-bar es menor de 400px de ancho */
-    .navbar-principal__logo { max-width: 8rem; } /* Reduce el tamaño del logo */
-    .navbar-principal__link { font-size: 0.9rem; padding: 0.5rem; } /* Reduce texto de links */
-    .navbar-principal__link--Book { display: none; } /* Oculta el botón "BOOK A TABLE" */
+@container (max-width: 700px) {
+    .navbar-principal__logo { max-width: 8rem; }
+    .navbar-principal__link { font-size: 0.9rem; padding: 0.5rem; }
+    .navbar-principal__link--Book { display: none; }
     .icon-bar { gap: 0.5rem; }
-    .icon-bar__register { padding: 0 0.8rem; font-size: 1rem; } /* Reduce el botón de registro */
+    .icon-bar__register { padding: 0 0.8rem; font-size: 1rem; }
 }
