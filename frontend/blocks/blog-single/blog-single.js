@@ -7,14 +7,8 @@ template.innerHTML = `
         <header-bar></header-bar>
     </div>
 
-    <div class="blog-layout__contenido">
-        
-        <div class="blog-footer">
-            <h2 class="blog-footer__text">Licensing Styleguide </h2>
-        </div>        
-        
+    <div class="blog-layout__contenido">      
     </div>
-
 </div>
 `;
 

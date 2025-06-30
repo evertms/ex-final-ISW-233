@@ -1,109 +1,101 @@
 .side-bar-container {
+  padding-top: 1.25vw;
+.side-bar-button__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: max-content;
-  margin-top: 5px;
+  gap: 1.5rem;
+  width: 21.875vw;
+  margin-top: 0;
   float: right;
-  margin-right: 10px;
-  border-left: 15px solid black;
-      
+  margin-right: 0;
+  border-left: 1.5rem solid black;
+  border-right: 0.85vw solid black;
+  height: clamp(50rem, 95.55vh, 100rem);
 }
 
 .side-bar-principal {
   background-color: black;
-
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0; 
 }
 
-.side-bar__menu{
-    width: 450px;
-    height: 278px;
-    border-radius: 20px;
-    margin-bottom: 25px;
+.side-bar__menu,
+.side-bar__reserv,
+.side-bar__about {
+  width: 100%;
+  
+  height: clamp(15rem, 17.39vw, 30rem); 
+  
+  border-radius: 2rem;
+  margin-bottom: 0; 
 
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.5) 70%
-      ),
-      url('/frontend/assets/images/menu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; 
 
+  font-family: 'Forum', serif; 
+}
+
+.side-bar__menu {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.5) 100%),
+  url('/frontend/assets/images/menu.jpg');
+}
+
+.side-bar__reserv {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.5) 100%),
+  url('/frontend/assets/images/reservation.jpg');
+}
+
+.side-bar__about {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.5) 100%),
+  url('/frontend/assets/images/our_rest.jpg');
+}
+
+.side-bar-button__container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
-    font-family: 'Playfair Display', serif;
+    width: 100%; 
+    padding: 1.5rem; 
+    box-sizing: border-box; 
 }
-
-.side-bar__reserv{
-    width: 450px;
-    height: 278px;    
-    border-radius: 20px;
-    margin-bottom: 25px;
-
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.5) 70%
-      ),
-      url('/frontend/assets/images/reservation.jpg');
-
-    background-size: cover;
-    background-position: center;    
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    font-family: 'Playfair Display', serif;
-}
-
-.side-bar__about{
-    width: 450px;
-    height: 278px;
-    border-radius: 20px;
-
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.5) 70%
-      ),
-    url('/frontend/assets/images/our_rest.jpg');
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    font-family: 'Playfair Display', serif;
-}
-
 
 .side-bar__button {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  padding-left: 20px;
-  font-size: 16px;
+  justify-content: space-between;
+
+  padding: 1rem 0;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+
+  font-size: 1.6rem;
+  font-family: 'Forum', serif;
   color: #EFE7D2;
   background-color: black;
-  border: 0 solid black;
-  border-radius: 30px 0 10px; /* Solo redondeamos arriba */
+  border: none;
+  border-radius: 2.4rem 0 1rem 0;
   cursor: pointer;
+  white-space: nowrap;
 
-  font-family: 'Playfair Display', serif;
+  max-width: 80%;
 }
 
 
@@ -114,18 +106,21 @@
   background-color: transparent;
   color: #EFE7D2;
   border-radius: 50%;
-  width: 0px;
-  height: 20px;
-  font-size: 16px;
-  padding: 0 20px;
-  margin-left: 10px;
+
+  background-color: rgba(24, 24, 24, 0.5);
+  border: 0.1rem solid rgba(239, 231, 210, 0.15);
+
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.6rem;
+  padding: 0;
+  margin-left: 1rem;
   
 }
 
-/* Hover en el botón */
 .side-bar__button:hover .side-bar__icon {
   opacity: 1;
-  transform: translateX(0);
+  width: 2rem;
   background-color: white;
   color: black;
 }
@@ -134,15 +129,18 @@
     text-decoration: underline;
 }
 
-
-/*====================================================================*/
-
 .home-layout__name{
-  width: 440px;
-  font-size: 5rem;
+  font-family: 'Forum', serif;
+  font-size: clamp(4rem, 7.3vw, 14rem);
+  letter-spacing: clamp(0.15rem, 0.15vw, 0.3rem);
   color: #EFE7D2;
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1;
+  padding-bottom: 3.9vw;
+  padding-left: 5.3vw;
   position: absolute;
-  bottom: 0;
-  margin-bottom: 50px;
-  margin-left: 40px;
+  bottom: 4.85vh;
+  left: 2rem;
+  z-index: 2;
 }

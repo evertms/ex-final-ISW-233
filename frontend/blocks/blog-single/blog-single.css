@@ -1,55 +1,40 @@
 .blog-layout {      
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  margin-top: 1.25vw;
   width: 100%;
-  height: calc(100vh - 17px);
+  height: calc(100vh - 1.7rem);
   box-sizing: border-box;
   overflow: hidden;
-  padding: 0px 10px; /* espacio para simular el borde */
+  padding: 0px 0.2rem;
+  gap: 1.6rem;
 }
 
 .blog-layout__fondo{
-    flex:1;
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
-    ), url('/frontend/assets/images/blog.jpg');
-    background-size: cover;
-    background-position: center;
-    border-right: 3px solid black;
-    border-radius: 10px 0 0 10px;
-    margin-bottom: 10px;
+  flex:1;
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.0) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  ), url('/frontend/assets/images/blog.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-right: none;
+  border-radius: 1.6rem;
+  margin-left: 1.25vw;
+  margin-bottom: 1.25vw;
 }
 
 .blog-layout__contenido {
-  flex: 1; /* Parte derecha */
+  flex: 1;
   color: white;
   overflow-y: auto;
-  margin-left: 10px;
+  margin-right: 1.25vw;
   background-color: black;
-  border: 2px solid gray;
-  border-radius: 10px;
-  margin-bottom: 76px;
-
-}
-
-.blog-footer {
-  position: absolute;
-  bottom: 21px;
-  right: 10px;
-  width: 941px;
-  border: 2px solid gray;
-  border-radius: 10px;
-  background-color: #0A0B0A;
-}
-
-.blog-footer__text {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  color: #EFE7D2;
-  font-size: 1rem;
+  border: 0.2rem solid rgba(128, 128, 128, 0.5);
+  border-radius: 1.6rem;
+  margin-bottom: 1.25vw;
 }

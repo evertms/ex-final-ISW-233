@@ -28,19 +28,13 @@ template.innerHTML = `
             </div>
 
             <div class="blog-article__description-wrapper">
-                <p id="fecha-articulo" class="blog-article__date"><----- 24TH AUG 2023</p>
+                <p id="fecha-articulo" class="blog-article__date"><--- 24TH AUG 2023 ---></p>
                 <h1 class="blog-article__title" id="titulo-articulo">HOW QITCHEN REDEFINES FLAVOR HARMONY IN EVERY BITE</h1>
                 <p id="description-articulo" class="blog-article__description"> Experience an orchestra of tastes as Quitchen's sushi unveils a symphony of perfectly balanced flavors</p>
                 <p id="description-articulo" class="blog-article__autor">Author:{}</p>
             </div>
         </div>
-        
-        <div class="blog-footer">
-            <h2 class="blog-footer__text">Licensing Styleguide </h2>
-        </div>        
-        
     </div>
-
 </div>
 `;
 

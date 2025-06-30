@@ -1,167 +1,173 @@
-.registration{      
-  margin-top: 10px;
+.registration {      
   display: flex;
   flex-direction: row;
+  margin-top: 1.25vw;
   width: 100%;
-  height: calc(100vh - 17px);
+  height: calc(100vh - 1.7rem);
   box-sizing: border-box;
   overflow: hidden;
-  padding: 0px 2px; /* espacio para simular el borde */
+  padding: 0px 0.2rem;
+  gap: 1.6rem;
 }
 
-.registration-fondo{
-    flex:1;
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
-    ),
-    url('/frontend/assets/images/reserv.jpg');
-    background-size: cover;
-    background-position: center;
-    border-right: 3px solid black;
-    border-radius: 10px 0 0 10px;
-    margin-left: 9px;
-    margin-right: 7px;
-    margin-top: 1px;
-    margin-bottom: 10px;
+.registration-fondo {
+  flex:1;
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.0) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  ), url('/frontend/assets/images/reserv.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-right: none;
+  border-radius: 1.6rem;
+  margin-left: 1.25vw;
+  margin-bottom: 1.25vw;
+}
+
+.registration-fondo__name {
+  font-family: 'Forum', serif;
+  max-width: 90%;
+  font-size: clamp(4rem, 7.3vw, 7rem);
+  letter-spacing: clamp(0.15rem, 0.15vw, 0.3rem);
+  color: #EFE7D2;
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1;
+  padding-bottom: 3.9vw;
+  padding-left: 5.3vw;
+  position: absolute;
+  bottom: 4.85vh;
+  left: 2rem;
+  z-index: 2;
 }
 
 .registration-contenido {
   flex: 1;
   background-color: black;
-  color: white;
+  color: #EFE7D2;
   overflow-y: auto;
   display: flex;
-  margin-left: 8px;
-  margin-right: 8px;
-
-  /*background-color: #0A0B0A;*/
-  border: 2px solid gray;
-  border-radius: 10px;
-  margin-bottom: 77px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  margin-right: 1.25vw;
+  border: 0.2rem solid gray;
+  border-radius: 1.6rem;
+  margin-bottom: 1.25vw;
+  padding: 2rem;
 }
 
-.registration-fondo__name{
-  width: 440px;
-  font-size: 5rem;
-  font-family: 'Playfair Display', serif;
-  color: #EFE7D2;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 50px;
-  margin-left: 40px;
+.registration-contenido::-webkit-scrollbar {
+  display: none;
 }
 
-/*=================================formulario==========================*/
-
-.registration-contenido__container{
+.registration-contenido__container {
+  display: flex;
   flex-direction: column;
   gap: 1.3rem;
   margin: 0 auto;
   background-color: transparent;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 1.6rem;
   color: #EFE7D2;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Satoshi', serif;
+  width: 100%;
+  max-width: 55rem;
+  text-align: center;
 }
 
-.registration-container__title{
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 50px;
-    margin-bottom: 60px;    
+
+.registration-container__title {
+  font-family: 'Playfair display', serif;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-top: 5rem;
+  margin-bottom: 6rem;
 }
 
-.registration-form{
+.registration-form {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  width: 650px;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 65rem;
   margin: 0 auto;
   background-color: transparent;
-  padding: 20px;
-  border-radius: 10px;
+  border-radius: 1rem;
   color: #EFE7D2;
-  font-family: 'Playfair Display', serif;    
+  font-family: 'Satoshi', serif;
 }
 
-.registration-form__group{
+.registration-form__group {
   display: flex;
   flex-direction: column;
 }
 
-.registration-form-label{
-  margin-bottom: 5px;
-  font-size: 0.9rem;
+.registration-form-label {
+  margin-bottom: 0.5rem; /* 5px */
+  font-size: 0.9rem; /* 9px */
+  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
 }
 
-.registration-form__input{
-  padding: 8px 15px;
-  border: 1px solid gray;
-  border-radius: 8px;
-  height: 40px;
+.registration-form__input {
+  padding: 0.8rem 1.5rem; /* 8px 15px */
+  border: 0.1rem solid gray; /* 1px */
+  border-radius: 0.8rem; /* 8px */
+  height: 4rem; /* 40px */
   background-color: #212221;
   color: #EFE7D2;
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
+  font-size: 1.6rem; /* 16px (si 1rem = 10px, entonces 1.6rem = 16px) */
 }
 
-.registration-form__input::placeholder{
-    color: white;
-    font-size: 1rem;
+.registration-form__input::placeholder {
+  color: gray; /* Mantienes el color gris, pero podrías cambiarlo a #EFE7D2 si prefieres consistencia */
+  font-size: 1.6rem; /* 16px */
 }
 
-.registration-submit{
+.registration-submit {
   display: flex;
-  justify-content: center;   
+  justify-content: center; 
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho para centrar su contenido */
 }
 
-.registration-submit__button{
-  width: 650px;
-  padding: 10px;
+.registration-submit__button {
+  width: 100%; /* Ocupa todo el ancho de su padre (`.registration-submit`) */
+  max-width: 65rem; /* **Corrección:** 650px, usa `max-width` para responsividad */
+  padding: 1rem; /* 10px */
   background-color: #EFE7D2;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem; /* 5px */
   color: black;
-  font-size: 1rem;
+  font-size: 1.6rem; /* 16px */
   cursor: pointer;
-  font-family: 'Playfair Display', serif;    
+  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Añade una transición suave */
 }
 
 .registration-submit__button:hover {
-    background-color: #0A0B0A;
-  color: #EFE7D2;
-}
-
-
-.registration-form__redirector{
-    display: block;
-    width: 135px;
-    margin: 0 auto;
-    text-decoration: underline;
-    color: #EFE7D2;
-}
-
-.registration-form__redirector::hover {
-    cursor: pointer;
-}
-
-.footer {
-  position: absolute;
-  bottom: 19px;
-  margin-left: -128px;
-  width: 940px;
-  border: 2px solid gray;
-  border-radius: 10px;
   background-color: #0A0B0A;
+  color: #EFE7D2;
 }
 
-.footer-text {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
+.registration-form__redirector {
+  display: block;
+  width: 13.5rem; /* 135px */
+  margin: 0 auto; /* **Corrección:** Centrado horizontalmente */
+  text-decoration: underline;
   color: #EFE7D2;
-  font-size: 1rem;
+  font-family: 'Satoshi', serif; /* **Fuente: Satoshi** */
+  font-size: 1.4rem; /* 14px */
+  text-align: center; /* Asegura que el texto se centre dentro de su propio bloque */
+  margin-top: 1.5rem; /* Añade un espacio superior para separarlo del botón */
+}
+
+.registration-form__redirector:hover { /* **Corrección:** `::hover` a `:hover` */
+  cursor: pointer;
+  text-decoration: none; /* Ejemplo: Quitar el subrayado al pasar el ratón */
 }

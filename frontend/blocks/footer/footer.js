@@ -10,7 +10,7 @@ template.innerHTML = `
             <img src="./assets/pngs/fb.png" alt="Facebook" width="40">                    
         </a>
 
-        <a href="https://x.com/tuperfil" target="_blank" >
+        <a href="https://x.com/evertms_" target="_blank" >
             <img src="./assets/pngs/x.png" alt="Twitter" width="40">
         </a>
         

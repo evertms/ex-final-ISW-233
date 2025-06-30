@@ -56,11 +56,6 @@ template.innerHTML = `
 
                 <a class="registration-form__redirector" href="#" id="login-button" >Go to login instead</a>
             </form>
-
-            <div class="footer">
-                <h2 class="footer-text">Licensing Styleguide </h2>
-            </div>                  
-            
         </div>        
     </div>
 

@@ -4,7 +4,7 @@ template.innerHTML = `
 <div class="reservation-layout">
     <div class="reservation-layout__fondo">
         <header-bar></header-bar>
-        <div class="reservation-layout__name">BOOK A TABLE</div>
+        <div class="reservation-layout__name">BOOK<br>A TABLE</div>
     </div>
 
     <div class="reservation-layout__contenido">
@@ -85,12 +85,6 @@ template.innerHTML = `
                     <button type="submit" class="reservation-form__button">RESERVE</button>
                 </div>
             </form>
-
-            <div class="footer">
-                <h2 class="footer-text">Licensing Styleguide </h2>
-            </div>      
-        </div>
-        
     </div>
 </div>
 `;

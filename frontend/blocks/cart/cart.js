@@ -11,10 +11,6 @@ template.innerHTML = `
     <div class="cart-contenido">
         <div class="cart-contenido__container">
             <h1 class="cart-container__title"><-- MY CART --></h1>
-            <div class="footer">
-                <h2 class="footer-text">Licensing Styleguide </h2>
-            </div>                  
-            
         </div>        
     </div>
 

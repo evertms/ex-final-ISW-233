@@ -1,112 +1,151 @@
 .contact-layout {      
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  margin-top: 1.25vw;
   width: 100%;
-  height: calc(100vh - 17px);
+  height: calc(100vh - 1.7rem);
   box-sizing: border-box;
   overflow: hidden;
-  padding: 0px 10px; /* espacio para simular el borde */
+  padding: 0px 0.2rem;
+  gap: 1.6rem;
 }
 
-.contact-layout__fondo{
-    flex:1;
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
-    ), url('/frontend/assets/images/contact.jpg');
-    background-size: cover;
-    background-position: center;
-    border-right: 3px solid black;
-    border-radius: 10px 0 0 10px;
+.contact-layout__fondo {
+  flex:1;
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.0) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  ), url('/frontend/assets/images/contact.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-right: none;
+  border-radius: 1.6rem;
+  margin-left: 1.25vw;
+  margin-bottom: 1.25vw;
+}
+
+.contact-layout__name {
+  font-family: 'Forum', serif;
+  max-width: 90%;
+  font-size: clamp(4rem, 7.3vw, 14rem);
+  letter-spacing: clamp(0.15rem, 0.15vw, 0.3rem);
+  color: #EFE7D2;
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1;
+  padding-bottom: 3.9vw;
+  padding-left: 5.3vw;
+  position: absolute;
+  bottom: 4.85vh;
+  left: 2rem;
+  z-index: 2;
 }
 
 .contact-layout__contenido {
-  flex: 1; /* Parte derecha */
+  flex: 1;
   background-color: black;
-  color: white;
+  color: #EFE7D2;
   overflow-y: auto;
   display: flex;
-/*
-  background-color: #0A0B0A;
-  border: 2px solid gray;
-  border-radius: 10px;
-*/ 
+  flex-direction: column;
+  align-items: center;
+  
+  margin-right: 1.25vw;
+
+  border: 0.2rem solid gray;
+  border-radius: 1rem;
+  margin-bottom: 1.25vw;
+  padding: 2rem;
 }
 
-.contact-layout__name{
-  width: 440px;
-  font-size: 5rem;
+.contact-layout__font {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "opening-hours image-gallery"
+    "maps get-in-touch";
+
+  max-width: 92rem;
+  margin: 0 auto;
+  gap: 2rem;
+  padding-bottom: 2rem;
+
+  @media (max-width: 76.8rem) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "opening-hours"
+      "image-gallery"
+      "maps"
+      "get-in-touch";
+  }
+}
+
+.contact-layout__description1 {
+  grid-area: opening-hours;
+  background-color: #0A0B0A; 
+  border: 0.2rem solid gray;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 40rem;
+}
+
+.contact-layout__title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  padding-bottom: 2rem;
   font-family: 'Playfair Display', serif;
   color: #EFE7D2;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 50px;
-  margin-left: 40px;
+  text-align: center;
+  line-height: 1.2;
 }
 
-/*=================================hours1==========================*/
-
-.contact-layout__font{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  grid-template-rows: auto auto; /* 2 filas */
-  max-width: 920px; /* Ajusta según necesidad */
-  margin-left: 16px; /* Centrado */
+.contact-layout__text {
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: 'Satoshi', sans-serif;
+  color: #EFE7D2;
+  white-space: pre-line;
+  text-align: left;
+  width: 100%;
 }
-
-.contact-layout__description1{
-  background-color: #0A0B0A; 
-  border: 2px solid gray;
-  border-radius: 10px;
-  padding: 20px 60px;
-  width: 360px;
-  height: 390px;
-}
-
-.contact-layout__title{
-    font-size: 1.390rem;
-    padding-bottom: 48px;
-    font-family: 'Playfair Display', serif;
-    color: #EFE7D2;
-    text-align: center;
-}
-
-.contact-layout__text{    
-    font-size: 0.8rem;
-    line-height: 2;
-    font-family: 'Playfair Display', serif;
-    color: #EFE7D2;    
-}
-
-/*=================================4images 2==========================*/
 
 .contact-layout__containerimg {
+  grid-area: image-gallery;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto; /* 2 filas */
-  width: 380px;
-  height: 400px;
-  margin-left: 16px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.contact-layout__img1, .contact-layout__img2, .contact-layout__img3, .contact-layout__img4 {
-  border-radius: 10px;
-  width: 207px;
-  height: 205px;
-  margin-right: 16px;
-  margin-bottom: 16px;
+.contact-layout__img1, 
+.contact-layout__img2, 
+.contact-layout__img3, 
+.contact-layout__img4 {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-wrapper {
   position: relative;
-  display: inline-block;
+  display: block;
+  overflow: hidden;
 }
 
-.contact-layout__img1{
+.contact-layout__img1 {
   filter: brightness(20%);
 }
 
@@ -116,73 +155,54 @@
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.8;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.instagram-logo img {
+  width: 4rem;
+  height: auto;
 }
 
 .instagram-logo:hover {
   opacity: 1;
 }
 
-
-/*============mapa 3==========*/
-
-.contact-layout__maps{
-  width: 480px;
-  height: 438px;
-  border-radius: 10px;
+.contact-layout__maps {
+  grid-area: maps;
+  width: 100%;
+  height: 40rem;
+  border-radius: 1rem;
   overflow: hidden;
   display: flex;
-  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-layout__maps iframe {
-    display: block;  
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
-/*==============================================get in touch 4===========================*/
-
-.contact-layout__getintouch{
-  background-color: #0A0B0A; 
-  border: 2px solid gray;
-  border-radius: 10px;
-  padding: 20px 25px;
-  width: 377px;
-  height: 367px;
-  margin-left: 16px;
-  margin-top: 16px;
-}
-
-.contact-layout__getintouch{
-    font-size: 1.390rem;
-    padding-bottom: 48px;
-    font-family: 'Playfair Display', serif;
-    color: #EFE7D2;
-    text-align: center;
-}
-
-.contact-layout__getintouch{    
-    font-size: 0.8rem;
-    line-height: 2;
-    font-family: 'Playfair Display', serif;
-    color: #EFE7D2;    
-}
-
-
-/*
-.contact-layout__description1 {
-  grid-row: 1;
-  grid-column: 1;
-}
-.contact-layout__containerimg {
-  grid-row: 1;
-  grid-column: 2;
-}
-.contact-layout__maps {
-  grid-row: 2;
-  grid-column: 1;
-}
 .contact-layout__getintouch {
-  grid-row: 2;
-  grid-column: 2;
+  grid-area: get-in-touch;
+  background-color: #0A0B0A; 
+  border: 0.2rem solid gray;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 40rem;
 }
-*/
+
+.contact-layout__getintouch .contact-layout__text a img {
+  width: 3rem;
+  height: auto;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}

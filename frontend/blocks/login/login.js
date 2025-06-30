@@ -36,16 +36,11 @@ template.innerHTML = `
                 </div>
 
                 <div class="login-submit">
-                    <button type="submit" class="login-submit__button">REGISTER</button>
+                    <button type="submit" class="login-submit__button">LOGIN</button>
                 </div>
 
                 <a class="login-form__redirector" href="#" id="registration-button" >Go to registration instead</a>
             </form>
-
-            <div class="footer">
-                <h2 class="footer-text">Licensing Styleguide </h2>
-            </div>                  
-            
         </div>        
     </div>
 

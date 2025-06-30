@@ -1,24 +1,22 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi'); 
 
-/* ====================== HEADER CONTAINER ====================== */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 3.75vw; /* 72px de Figma en 1920px -> 3.75vw */
+    padding-left: 3.75vw;
+    padding-top: 3.75vw;
     box-sizing: border-box;
 }
 
-
-/* ====================== NAVBAR ====================== */
 .navbar-principal {
     background-color: #0A0B0A;
     border-radius: 1.2rem;
     padding: 1rem 0.8rem;
     display: flex;
     align-items: center;
-    gap: 0; /* Este gap es entre los componentes directos de navbar-principal, no los items del menu */
+    gap: 0;
     margin-top: 0;
     height: auto;
     min-width: 25rem;
@@ -28,8 +26,7 @@
     display: flex;
     align-items: center;
     list-style: none;
-    /* Ajustado el gap para el espacio entre elementos de la lista */
-    gap: 1.2rem; /* Este gap se aplica entre todos los <li> y el burger-menu */
+    gap: 1.2rem;
     margin: 0;
     padding: 0;
 }
@@ -55,12 +52,10 @@
     align-items: center;
     height: auto;
     max-height: clamp(3rem, 4vw, 4rem); 
-    /* Para dar espacio entre el logo y los otros elementos en desktop */
-    margin-right: 1.2rem; /* Añade un margen a la derecha del logo si el gap no es suficiente */
+    margin-right: 1.2rem;
 }
 
 .navbar-principal__logo {
-    padding-top: 0.4rem;
     max-width: 100%;
     height: auto;
     max-height: clamp(3rem, 4vw, 4rem); 
@@ -76,28 +71,24 @@
     background-color: rgba(24, 24, 24, 0.5);
     border: 0.1rem solid rgba(239, 231, 210, 0.15);
     border-radius: 0.5rem;
-    height: 4rem;
-    line-height: 4rem;
     white-space: nowrap;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /* Asegura que el botón BOOK tenga un poco de margen a la izquierda si no lo controla el gap */
-    margin-left: 1.2rem; /* Ajusta según el diseño de Figma */
+    margin-left: 1.2rem;
+    flex-shrink: 0;
 }
 
 .navbar-principal__link--Book:hover {
     background-color: #666464;
 }
 
-
-/* ====================== ICON BAR ====================== */
 .icon-bar {
     border-radius: 1rem;
     padding: 1rem 1.5rem;
     display: flex;
     gap: 1rem;
-    margin-top: 0;
+    flex-shrink: 0;    
 }
 
 .icon-bar__btn {
@@ -141,44 +132,37 @@
     font-size: 2.2rem;
 }
 
-
-/* ====================== BURGER MENU ====================== */
 .burger-menu {
     font-size: 1.8rem;
     background-color: rgba(24, 24, 24, 0.5);
     border-radius: 0.8rem;
     padding: 0.4rem 1rem; 
     border: 0.1rem solid rgba(239, 231, 210, 0.15);
-    /* El burger-menu no se oculta en desktop según tu requisito */
-    display: block; /* Asegura que siempre esté visible */
-    margin-right: 1.2rem; /* Espacio entre el burger y el logo */
+    display: block;
+    margin-right: 1.2rem;
 }
 
 .burger-menu:hover {
     background-color: #666464;
 }
 
-/* Esconder el input de checkbox */
 .ocultar {
     display: none;
 }
 
-/* Estilos para el icono del menú */
 .menu-icon {
     color: white;
     cursor: pointer;
 }
 
-/* ====================== MEDIA QUERIES PARA RESPONSIVE ====================== */
 
-/* Ocultar elementos específicos y reordenar para pantallas medianas/pequeñas */
-@media screen and (max-width: 76.8rem) { /* Breakpoint para tablets y laptops más pequeñas (ej. tu 1368x768 si la ventana se reduce) */
+@media screen and (max-width: 76.8rem) {
 
     .header-container {
-        flex-direction: column; /* Apila los elementos: navbar arriba, icon-bar abajo */
-        align-items: center; /* Alinea a la izquierda (o a tu gusto) */
-        padding: 2.5vw; /* Reduce el padding global para pantallas más pequeñas */
-        gap: 2rem; /* Espacio entre navbar y icon-bar */
+        flex-direction: column; 
+        align-items: center;
+        padding: 2.5vw;
+        gap: 2rem; 
     }
 
     .navbar-principal__link--Name {
@@ -186,74 +170,69 @@
         margin-right: 0;
     }
 
-    .navbar-principal__menu li:nth-child(3), /* Esto ocultaría "MENU" */
-    .navbar-principal__menu li:nth-child(4)  /* Esto ocultaría "ABOUT" */
+    .navbar-principal__menu li:nth-child(3), 
+    .navbar-principal__menu li:nth-child(4)  
     {
         display: none;
     }
 
-    /* 3. Ajustar el navbar-principal__menu */
     .navbar-principal__menu {
-        /* No cambia la dirección a columna aquí, porque solo el burger, logo y BOOK quedan en fila */
-        gap: 1rem; /* Ajusta el gap entre los elementos restantes */
+        gap: 1rem;
     }
 
-    /* 4. Ajustar el icon-bar (ya está debajo por el flex-direction: column del header-container) */
     .icon-bar {
-        width: 100%; /* Asegura que el icon-bar ocupe todo el ancho disponible */
-        justify-content: flex-start; /* Alinea los botones a la derecha si es necesario */
-        padding: 0.8rem 1rem; /* Ajusta el padding para este tamaño */
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1rem; 
     }
 
     .icon-bar__register {
-        /* Ajustar el font-size si es necesario en pantallas pequeñas */
         font-size: 1rem;
         padding: 0 1rem;
     }
 
     .icon-bar__btn {
-        width: 4.5rem; /* Ligeramente más pequeños */
+        width: 4.5rem;
         height: 4.5rem;
     }
 }
 
-/* Estilos para el menú desplegable del burger (oculto por defecto) */
-/* El menú se mostrará cuando se active el checkbox */
-.menu { /* Asumiendo que esta clase la aplica tu JS al menu desplegable */
-    display: none; /* Oculto por defecto */
-    position: absolute; /* O fixed, dependiendo de cómo quieras que se comporte */
-    top: calc(100% + 1rem); /* Debajo de la barra de navegación */
+.menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1rem);
     left: 0;
     width: 100%;
-    background-color: #0A0B0A; /* Fondo del menú desplegable */
+    background-color: #0A0B0A;
     border-radius: 1.2rem;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Asegura que esté por encima de otros contenidos */
-    flex-direction: column; /* Apila los elementos verticalmente */
-    gap: 1rem; /* Espacio entre los ítems del menú desplegable */
+    z-index: 1000;
+    flex-direction: column; 
+    gap: 1rem; 
 }
 
-/* Estilos para los enlaces dentro del menú desplegable */
 #menu-toggle:checked ~ .menu {
-    display: flex; /* Muestra el menú cuando el checkbox está marcado */
+    display: flex;
 }
 
-/* Ajusta los enlaces dentro del menu desplegable */
 .menu .navbar-principal__link {
-    display: block; /* Asegura que los enlaces ocupen todo el ancho y se apilen */
+    display: block;
     text-align: left;
     padding: 1rem 0;
     height: auto;
     line-height: normal;
 }
 
-/* IMPORTANTE: Vuelve a mostrar los elementos ocultos cuando el toggle está activo */
-/* Esto requiere que tu JS mueva los elementos ocultos a la sección '.menu'
-   o que los muestres explícitamente si se usan en el menú desplegable.
-   Si los elementos "MENU" y "ABOUT" son los que se mostrarán en el menú desplegable: */
 #menu-toggle:checked ~ .navbar-principal__menu li:nth-child(2),
 #menu-toggle:checked ~ .navbar-principal__menu li:nth-child(3) {
-    display: block; /* Ahora se muestran dentro del menú desplegado */
-    /* Asegúrate de que el burger-menu y logo estén fuera de esta lista si no quieres que se oculten y reaparezcan */
+    display: block;
+}
+
+@container (max-width: 700px) { /* Ejemplo: si el header-bar es menor de 400px de ancho */
+    .navbar-principal__logo { max-width: 8rem; } /* Reduce el tamaño del logo */
+    .navbar-principal__link { font-size: 0.9rem; padding: 0.5rem; } /* Reduce texto de links */
+    .navbar-principal__link--Book { display: none; } /* Oculta el botón "BOOK A TABLE" */
+    .icon-bar { gap: 0.5rem; }
+    .icon-bar__register { padding: 0 0.8rem; font-size: 1rem; } /* Reduce el botón de registro */
 }

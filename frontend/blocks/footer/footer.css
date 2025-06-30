@@ -1,9 +1,9 @@
 .social-icons{
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-right: 485px;
-    margin-bottom: 30px;
+    margin-right: 24vw;
+    margin-bottom: 1.25vw;
 }

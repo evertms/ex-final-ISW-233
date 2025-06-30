@@ -1,31 +1,48 @@
-.cart{      
-  margin-top: 10px;
+.cart {      
   display: flex;
   flex-direction: row;
+  margin-top: 1.25vw;
   width: 100%;
-  height: calc(100vh - 17px);
+  height: calc(100vh - 1.7rem);
   box-sizing: border-box;
   overflow: hidden;
-  padding: 0px 2px; /* espacio para simular el borde */
+  padding: 0px 0.2rem;
+  gap: 1.6rem;
 }
 
-.cart-fondo{
-    flex:1;
-    background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
-    ), url('/frontend/assets/images/cart.jpg');
-    background-size: cover;
-    background-position: center;
-    border-right: 3px solid black;
-    border-radius: 10px 0 0 10px;
-    margin-left: 9px;
-    margin-right: 7px;
-    margin-top: 1px;
-    margin-bottom: 10px;
+.cart-fondo {
+  flex:1;
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.0) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  ), url('/frontend/assets/images/cart.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-right: none;
+  border-radius: 1.6rem;
+  margin-left: 1.25vw;
+  margin-bottom: 1.25vw;
+}
+
+.cart-fondo__name {
+  font-family: 'Forum', serif;
+  max-width: 90%;
+  font-size: clamp(4rem, 7.3vw, 14rem);
+  letter-spacing: clamp(0.15rem, 0.15vw, 0.3rem);
+  color: #EFE7D2;
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1;
+  padding-bottom: 3.9vw;
+  padding-left: 5.3vw;
+  position: absolute;
+  bottom: 4.85vh;
+  left: 2rem;
+  z-index: 2;
 }
 
 .cart-contenido {
@@ -34,60 +51,27 @@
   color: white;
   overflow-y: auto;
   display: flex;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-right: 1.25vw;
 
-  /*background-color: #0A0B0A;*/
-  border: 2px solid gray;
-  border-radius: 10px;
-  margin-bottom: 77px;
+  border: 0.2rem solid gray;
+  border-radius: 1.6rem;
+  margin-bottom: 1.25vw;
 }
 
-.cart-fondo__name{
-  width: 440px;
-  font-size: 5rem;
-  font-family: 'Playfair Display', serif;
-  color: #EFE7D2;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 50px;
-  margin-left: 40px;
-}
-
-/*=================================formulario==========================*/
-
-.cart-contenido__container{
+.cart-contenido__container {
   flex-direction: column;
   gap: 1.3rem;
   margin: 0 auto;
   background-color: transparent;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 1rem;
   color: #EFE7D2;
   font-family: 'Playfair Display', serif;
 }
 
-.cart-container__title{
+.cart-container__title {
     text-align: center;
     font-size: 2rem;
-    margin-top: 50px;
-    margin-bottom: 60px;    
-}
-
-
-.footer {
-  position: absolute;
-  bottom: 19px;
-  margin-left: -357px;
-  width: 940px;
-  border: 2px solid gray;
-  border-radius: 10px;
-  background-color: #0A0B0A;
-}
-
-.footer-text {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  color: #EFE7D2;
-  font-size: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 6rem;    
 }

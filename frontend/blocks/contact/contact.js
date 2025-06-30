@@ -12,17 +12,16 @@ template.innerHTML = `
         <div class="contact-layout__font">
             <div class="contact-layout__description1">
                 <h2 class="contact-layout__title"><-- OPENING HOURS --></h2>
-                <p class="contact-layout__text">Monday ----------------------------- 16:00 - 22:30</p>
-                <p class="contact-layout__text">Tuesday ---------------------------- 16:00 - 22:30</p>
-                <p class="contact-layout__text">Wednesday -------------------------- 16:00 - 22:30</p>
-                <p class="contact-layout__text">Thursday --------------------------- 16:00 - 22:30</p>
-                <p class="contact-layout__text">Friday ----------------------------- 16:00 - 22:30</p>
-                <p class="contact-layout__text">Saturday & Sunday ------------------ 16:00 - 22:30</p>
+                <p class="contact-layout__text">Mon...................16:00 - 22:30</p>
+                <p class="contact-layout__text">Tue...................16:00 - 22:30</p>
+                <p class="contact-layout__text">Wed...................16:00 - 22:30</p>
+                <p class="contact-layout__text">Thu...................16:00 - 22:30</p>
+                <p class="contact-layout__text">Fri...................16:00 - 22:30</p>
             </div>
             <div class="contact-layout__containerimg">
                 <div class="image-wrapper">
                     <img class="contact-layout__img1" src="/frontend/assets/images/contact.jpg" alt="Imagen">
-                    <a href="https://instagram.com/tuperfil" target="_blank" class="instagram-logo">
+                    <a href="https://instagram.com/evertms_" target="_blank" class="instagram-logo">
                         <img src="/frontend/assets/pngs/ig.png" alt="Instagram" width="40">
                     </a>
                 </div>
@@ -38,19 +37,19 @@ template.innerHTML = `
 
             <div class="contact-layout__getintouch">
                 <h2 class="contact-layout__title"><-- GET IN TOUCH --></h2>
-                <p class="contact-layout__text">ADDRES ------------- 23 Greenfield Avenue, 120 00</p>
-                <p class="contact-layout__text">PHONE --------------------------- +49 1234 56789</p>
-                <p class="contact-layout__text">EMAIL --------------------- email@example.com</p>
-                <p class="contact-layout__text">FOLLOW ------------------
-                    <a href="https://instagram.com/tuperfil" target="_blank">
+                <p class="contact-layout__text">ADDRESS: 23 Greenfield Avenue, 120 00</p>
+                <p class="contact-layout__text">PHONE: +49 1234 56789</p>
+                <p class="contact-layout__text">EMAIL: morenoserrateevert@gmail.com</p>
+                <p class="contact-layout__text">FOLLOW
+                    <a href="https://instagram.com/evertms_" target="_blank">
                         <img src="/frontend/assets/pngs/ig.png" alt="Instagram" width="40">
                     </a>
 
-                    <a href="https://facebook.com/tuperfil" target="_blank"> 
+                    <a href="https://facebook.com/evert.morenoserrate.5" target="_blank"> 
                         <img src="/frontend/assets/pngs/fb.png" alt="Facebook" width="40">                    
                     </a>
 
-                    <a href="https://x.com/tuperfil" target="_blank" >
+                    <a href="https://x.com/evertms_" target="_blank" >
                         <img src="/frontend/assets/pngs/x.png" alt="Twitter" width="40">
                     </a>
                 </p>

@@ -21,7 +21,6 @@ template.innerHTML = `
     </nav>
 
     <div class="icon-bar">
-        <button id="register-btn" class="icon-bar__register">REGISTRATION</button>
         
         <button id="login-btn" class="icon-bar__btn" >
             <i class="icon-bar__icon fas fa-user"></i>
