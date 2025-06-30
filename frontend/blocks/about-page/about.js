@@ -8,7 +8,7 @@ template.innerHTML = `
         </div>
         <div class="about-layout__contenido">
             <div class="about-layout__font">
-                <div class="about-layout__description1">
+                <div class="about-layout__description">
                     <h2 class="about-layout__title">SUSHI ARTISTRY REDEFINED </h2>
                     <p class="about-layout__text">Where culinary craftsmanship meets modern elegance. Indulge in the finest sushi, expertly curated to elevate your dining experience.</p>
                 </div>
@@ -46,11 +46,6 @@ template.innerHTML = `
                         <p class="about-layout__text2">Founded with passion for culinary excellence. Qitchen's journey began in the heart of Prague. Over years, it evolved into a haven for sushi enthusiasts. Celebrated for its arful mastery and devotion to redefining gastronomy.</p>
                     </div>
             </div>
-
-            <div class="about-footer">
-                <h2 class="about-footer__text">Licensing Styleguide</h2>
-            </div>
-
         </div>  
     </div>
 `;
