@@ -11,7 +11,8 @@ import './blocks/registration/registration.js';
 import './blocks/login/login.js';
 import './blocks/cart/cart.js';
 import './blocks/blog-single/blog-single.js';
-
+import './blocks/blog-card/blog-card.js'
+import './blocks/menu-item/menu-item.js'
 import router from './services/router.js';
 
 router.init();

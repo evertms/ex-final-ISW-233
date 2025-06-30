@@ -129,3 +129,6 @@ En la carpeta `frontend/blocks`, los componentes visuales están construidos com
 
 ## 5. Pasos a seguir  
 Ejecutar con LiveServer en la raíz del proyecto y, al ser redirigido al navegador, ir a la carpeta /frontend. 
+
+## 6. Link al documento de defensa - 30/06/2025
+https://docs.google.com/document/d/1FCOG6fwe1zNxs9iYA_8SeKVwDtuoreDsG8Ce0ilDgEI/edit?usp=sharing

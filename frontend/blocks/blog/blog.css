@@ -61,9 +61,9 @@
   align-items: center;
 }
 
-.blog-layout__contenido::-webkit-scrollbar {
-display: none;
-}
+/*.blog-layout__contenido::-webkit-scrollbar {
+
+}*/
 
 .blog-container__title,
 .blog-container__title2 {
