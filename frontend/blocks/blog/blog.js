@@ -14,7 +14,7 @@ template.innerHTML = `
         <div class="blog-layout__categorias">
             <button class="blog-layout__btn"> ALL NEWS </button>
             <button class="blog-layout__btn"> FAVORITIES </button>
-            <button class="blog-layout__btn"> MY ARTICULES </button>
+            <button class="blog-layout__btn"> MY ARTICLES </button>
         </div>
 
         <div class="blog-article" id="componente-detalle">
