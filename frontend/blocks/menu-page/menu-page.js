@@ -162,7 +162,7 @@ class MenuPage extends HTMLElement {
     batch.forEach(item => {
       const card = new MenuItem(item);
       this.container.insertBefore(card, this.container.lastChild);
-      });
+    });
   
     this.currentIndex = endIndex;
 
